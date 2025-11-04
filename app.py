@@ -21,14 +21,14 @@ def clean_text(text: str) -> str:
     words = [ps.stem(word) for word in text.split() if word not in all_stopwords]
     return ' '.join(words)
 
-app = FastAPI(title="Twitter Sentiment Analysis API")
+app = FastAPI()
 
 class Tweet(BaseModel):
     text: str
 
 @app.get("/")
 def home():
-    return {"message": "Api is live"}
+    return {"message": "Api is live go to above_url/docs to test"}
 
 @app.post("/predict")
 def predict(tweet: Tweet):
