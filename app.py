@@ -28,7 +28,7 @@ class Tweet(BaseModel):
 
 @app.get("/")
 def home():
-    return {"message": "Twitter Sentiment Analysis API. Go To /docs to test the api"}
+    return {"message": "Api is live"}
 
 @app.post("/predict")
 def predict(tweet: Tweet):
